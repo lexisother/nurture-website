@@ -1,0 +1,23 @@
+:root {
+  --header-font-size: 3vh;
+}
+
+nav {
+  display: flex;
+  height: 3rem;
+  background-color: yellow;
+  align-items: center;
+
+  .title {
+    font-size: var(--header-font-size);
+    margin-right: auto;
+    background-color: blue;
+  }
+  .links {
+    display: flex;
+    font-size: var(--header-font-size);
+    gap: 1rem;
+    justify-content: right;
+    background-color: green;
+  }
+}
