@@ -1,6 +1,4 @@
-:root {
-  --header-font-size: 3vh;
-}
+$header-font-size: 3vh;
 
 nav {
   display: flex;
@@ -9,13 +7,13 @@ nav {
   align-items: center;
 
   .title {
-    font-size: var(--header-font-size);
+    font-size: $header-font-size;
     margin-right: auto;
     background-color: blue;
   }
   .links {
     display: flex;
-    font-size: var(--header-font-size);
+    font-size: $header-font-size;
     gap: 1rem;
     justify-content: right;
     background-color: green;
