@@ -1,6 +1,8 @@
+<?php include __DIR__ . "/../config.inc.php" ?>
+
 <nav>
   <div class="title">
-    Title
+    <?php echo $CONFIG['site_name'] ?>
   </div>
   <div class="links">
     <a>test 1</a>
