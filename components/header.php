@@ -5,8 +5,10 @@
     <?php echo $CONFIG['site_name'] ?>
   </div>
   <div class="links">
-    <a>test 1</a>
-    <a>test 2</a>
-    <a>test 3</a>
+    <?php
+    foreach (range(1, 3) as $page) {
+      echo "<a href='/{$page}'>test {$page}</a>";
+    }
+    ?>
   </div>
 </nav>
