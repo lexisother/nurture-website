@@ -9,11 +9,13 @@ nav {
   align-items: center;
 
   .title {
+    color: white;
     font-size: $header-font-size;
     margin: 1rem;
     margin-right: auto;
   }
   .links {
+    color: $links-color;
     display: flex;
     font-size: $header-font-size;
     gap: 1rem;
