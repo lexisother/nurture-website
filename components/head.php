@@ -14,6 +14,8 @@ foreach (new DirectoryIterator(__DIR__ . '/../scss') as $file) {
 ?>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     <?php echo $res; ?>
   </style>

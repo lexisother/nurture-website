@@ -1,6 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 @import '_colorscheme';
+@import '_include-media';
 
-body {
+.include-media-test {
+  @include media('<=phone') {
+    background-color: #def;
+
+    &:before {
+      content: '<=phone';
+    }
+  }
+
+  @include media('>phone') {
+    background-color: #abc;
+
+    &:before {
+      content: '>phone';
+    }
+  }
+
+  @include media('>=815px', '<desktop') {
+    background-color: #fed;
+
+    &:before {
+      content: '>=815px, <desktop';
+    }
+  }
+
+  @include media('>=desktop') {
+    background-color: #fab;
+
+    &:before {
+      content: '>=desktop';
+    }
+  }
+
   background-color: $bg;
 }

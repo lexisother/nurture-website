@@ -3,3 +3,6 @@
 // files every time you make a page.
 include __DIR__ . '/components/head.php';
 include __DIR__ . '/components/header.php';
+?>
+
+<div class="include-media-test"></div>

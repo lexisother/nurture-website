@@ -1,25 +1,33 @@
 @import '_colorscheme';
+@import '_include-media';
 $header-font-size: 4vh;
 
 nav {
+  @include media('>phone', '<tablet') {
+    font-size: 3vh;
+    flex-direction: column;
+  }
+
   font-family: 'IBM Plex Sans', sans-serif;
+  font-size: $header-font-size;
   display: flex;
-  height: 4rem;
+  justify-content: space-between;
   background-color: $base-02;
   align-items: center;
 
   .title {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
     color: white;
-    font-size: $header-font-size;
     margin: 1rem;
-    margin-right: auto;
   }
   .links {
-    color: $links-color;
     display: flex;
-    font-size: $header-font-size;
+    flex-shrink: 0;
+    flex-wrap: wrap;
     gap: 1rem;
+    color: $links-color;
     margin: 1rem;
-    justify-content: right;
   }
 }
