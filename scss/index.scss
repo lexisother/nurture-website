@@ -2,38 +2,44 @@
 @import '_colorscheme';
 @import '_include-media';
 
+$debug-mode: false;
+
 .include-media-test {
-  @include media('<=phone') {
-    background-color: #def;
+  @if $debug-mode {
+    @include media('<=phone') {
+      background-color: #def;
 
-    &:before {
-      content: '<=phone';
+      &:before {
+        content: '<=phone';
+      }
     }
-  }
 
-  @include media('>phone') {
-    background-color: #abc;
+    @include media('>phone') {
+      background-color: #abc;
 
-    &:before {
-      content: '>phone';
+      &:before {
+        content: '>phone';
+      }
     }
-  }
 
-  @include media('>=815px', '<desktop') {
-    background-color: #fed;
+    @include media('>=815px', '<desktop') {
+      background-color: #fed;
 
-    &:before {
-      content: '>=815px, <desktop';
+      &:before {
+        content: '>=815px, <desktop';
+      }
     }
-  }
 
-  @include media('>=desktop') {
-    background-color: #fab;
+    @include media('>=desktop') {
+      background-color: #fab;
 
-    &:before {
-      content: '>=desktop';
+      &:before {
+        content: '>=desktop';
+      }
     }
+    background-color: $bg;
+    display: block;
+  } @else {
+    display: none;
   }
-
-  background-color: $bg;
 }
