@@ -1,21 +1,23 @@
+@import '_colorscheme';
 $header-font-size: 4vh;
 
 nav {
+  font-family: 'IBM Plex Sans', sans-serif;
   display: flex;
   height: 4rem;
-  background-color: yellow;
+  background-color: $base-02;
   align-items: center;
 
   .title {
     font-size: $header-font-size;
+    margin: 1rem;
     margin-right: auto;
-    background-color: blue;
   }
   .links {
     display: flex;
     font-size: $header-font-size;
     gap: 1rem;
+    margin: 1rem;
     justify-content: right;
-    background-color: green;
   }
 }
