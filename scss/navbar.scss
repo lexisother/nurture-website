@@ -26,8 +26,13 @@ nav {
     display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;
-    gap: 1rem;
     color: $links-color;
     margin: 1rem;
+
+    :not(:last-child) {
+      border-right: $base-01 1px solid;
+      padding-right: 0.5rem;
+      margin-right: 0.5rem;
+    }
   }
 }
