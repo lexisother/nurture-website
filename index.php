@@ -36,6 +36,10 @@ $router->get('/', function () {
   include 'home.php';
 });
 
+$router->get('/projects', function () {
+  include 'projects.php';
+});
+
 foreach (range(1, 3) as $i) {
   $router->get("/{$i}", function () use ($i) {
     include __DIR__ . '/components/head.php';

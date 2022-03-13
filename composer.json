@@ -1,6 +1,9 @@
 {
     "require": {
         "bramus/router": "^1.6",
-        "scssphp/scssphp": "^1.10"
+        "scssphp/scssphp": "^1.10",
+        "knplabs/github-api": "^3.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "http-interop/http-factory-guzzle": "^1.0"
     }
 }
