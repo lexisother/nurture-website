@@ -3,7 +3,8 @@
 use Github\AuthMethod;
 use Github\Client;
 
-include 'config.inc.php';
+$GLOBALS['includeWithVariables'](__DIR__ . '/../templates/base.php', ['pageTitle' => 'Projects']);
+include __DIR__ . '/../config.inc.php';
 
 // TODO: Add caching https://github.com/php-cache/filesystem-adapter
 // see https://packagist.org/packages/knplabs/github-api for info

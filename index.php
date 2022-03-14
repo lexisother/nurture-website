@@ -33,17 +33,16 @@ $GLOBALS["includeWithVariables"] = function ($filePath, $variables = array(), $p
 $router = new Router();
 
 $router->get('/', function () {
-  include 'home.php';
+  include 'pages/home.php';
 });
 
 $router->get('/projects', function () {
-  include 'projects.php';
+  include 'pages/projects.php';
 });
 
 foreach (range(1, 3) as $i) {
   $router->get("/{$i}", function () use ($i) {
-    include __DIR__ . '/components/head.php';
-    include __DIR__ . '/components/header.php';
+    include __DIR__ . '/templates/base.php';
     print $i;
   });
 }
