@@ -31,6 +31,7 @@ $GLOBALS["includeWithVariables"] = function ($filePath, $variables = array(), $p
 // }}}
 
 $router = new Router();
+$posts = include 'markdown.php';
 
 $router->get('/', function () {
   include 'pages/home.php';
@@ -39,5 +40,12 @@ $router->get('/', function () {
 $router->get('/projects', function () {
   include 'pages/projects.php';
 });
+
+foreach ($posts as $post) {
+  $title = $post['meta']['title'];
+  $router->get("/posts/{$title}", function () use ($post) {
+    $GLOBALS['includeWithVariables']('pages/post.php', ['postData' => $post]);
+  });
+}
 
 $router->run();
