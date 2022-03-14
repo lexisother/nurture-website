@@ -6,6 +6,17 @@ $debug-mode: false;
 
 body {
   background-color: $bg;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+a {
+  color: #3273dc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 .include-media-test {
