@@ -41,11 +41,18 @@ $router->get('/projects', function () {
   include 'pages/projects.php';
 });
 
-foreach ($posts as $post) {
-  $title = $post['meta']['title'];
-  $router->get("/posts/{$title}", function () use ($post) {
-    $GLOBALS['includeWithVariables']('pages/post.php', ['postData' => $post]);
+$router->mount('/posts', function () use ($router, $posts) {
+  $router->get('/', function () use ($posts) {
+    $GLOBALS['includeWithVariables']('pages/posts.php', ['posts' => $posts]);
   });
-}
+
+  foreach ($posts as $post) {
+    $title = $post['meta']['title'];
+    $router->get("/posts/{$title}", function () use ($post) {
+      $GLOBALS['includeWithVariables']('pages/post.php', ['postData' => $post]);
+    });
+  }
+});
+
 
 $router->run();

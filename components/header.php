@@ -7,5 +7,6 @@
   </div>
   <div class="links">
     <a href='/projects'>Projects</a>
+    <a href='/posts'>Posts</a>
   </div>
 </nav>
