@@ -11,9 +11,20 @@ include __DIR__ . '/../config.inc.php';
 
 $client = new Client();
 $client->authenticate($CONFIG['github_token'], AuthMethod::ACCESS_TOKEN);
+?>
 
-$repositories = $client->api('user')->repositories('lexisother');
-
-foreach ($repositories as $repo) {
-  echo $repo['name'] . '<br>';
-}
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <?php
+  $repositories = $client->api('user')->repositories('lexisother');
+  foreach ($repositories as $repo) {
+  ?>
+    <tr>
+      <td><a href="<?= $repo['html_url'] ?>"><?= $repo['name'] ?></a></td>
+    </tr>
+  <?php
+  }
+  ?>
+</table>
