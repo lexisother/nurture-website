@@ -40,11 +40,4 @@ $router->get('/projects', function () {
   include 'pages/projects.php';
 });
 
-foreach (range(1, 3) as $i) {
-  $router->get("/{$i}", function () use ($i) {
-    include __DIR__ . '/templates/base.php';
-    print $i;
-  });
-}
-
 $router->run();
