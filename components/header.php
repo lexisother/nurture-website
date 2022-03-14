@@ -2,13 +2,10 @@
 
 <nav>
   <div class="title">
-    <?php echo $CONFIG['site_name'] ?>
+    <a href="/"><?php echo $CONFIG['site_name'] ?>
+    </a>
   </div>
   <div class="links">
-    <?php
-    foreach (range(1, 3) as $page) {
-      echo "<a href='/{$page}'>test {$page}</a>";
-    }
-    ?>
+    <a href='/projects'>Projects</a>
   </div>
 </nav>
