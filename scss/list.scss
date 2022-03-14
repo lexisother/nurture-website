@@ -1,6 +1,6 @@
 @import '_colorscheme.scss';
 
-.projects-page {
+div[class*='-page'] {
   max-width: 920px;
   margin: auto;
 
