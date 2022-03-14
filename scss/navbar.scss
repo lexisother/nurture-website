@@ -20,6 +20,15 @@ nav {
     flex-wrap: wrap;
     color: white;
     margin: 1rem;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
   }
   .links {
     display: flex;
