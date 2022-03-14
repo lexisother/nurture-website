@@ -5,15 +5,14 @@ use Github\Client;
 // use Github\HttpClient\Message\ResponseMediator;
 
 $GLOBALS['includeWithVariables'](__DIR__ . '/../templates/base.php', ['pageTitle' => 'Projects']);
-include __DIR__ . '/../config.inc.php';
-include __DIR__ . '/../lib.php';
-
 $title = "Projects";
 $description = "This is a list of (almost) all of my GitHub projects.";
 
+include __DIR__ . '/../config.inc.php';
+include __DIR__ . '/../lib.php';
+
 // TODO: Add caching https://github.com/php-cache/filesystem-adapter
 // see https://packagist.org/packages/knplabs/github-api for info
-
 $client = new Client();
 $client->authenticate($CONFIG['github_token'], AuthMethod::ACCESS_TOKEN);
 

@@ -48,7 +48,7 @@ $router->mount('/posts', function () use ($router, $posts) {
 
   foreach ($posts as $post) {
     $title = $post['meta']['title'];
-    $router->get("/posts/{$title}", function () use ($post) {
+    $router->get("/{$title}", function () use ($post) {
       $GLOBALS['includeWithVariables']('pages/post.php', ['postData' => $post]);
     });
   }
