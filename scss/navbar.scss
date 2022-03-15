@@ -1,6 +1,6 @@
 @import '_colorscheme';
 @import '_include-media';
-$header-font-size: 4vh;
+$header-font-size: 3vh;
 
 nav {
   @include media('>phone', '<tablet') {
