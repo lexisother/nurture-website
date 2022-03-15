@@ -33,13 +33,9 @@ $diff = $new->diff($bdate)->y;
 <div class="include-media-test"></div>
 
 <style>
-  .home-page>div>p {
-    display: flex;
-    justify-content: center;
-    gap: .4rem;
-  }
-
   .home-page>div>p>img {
+    display: inline-block;
+    vertical-align: middle;
     height: 24px;
   }
 </style>
