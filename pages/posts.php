@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['includeWithVariables'](__DIR__ . '/../templates/base.php', ['pageTitle' => "Posts"]);
+includeWithVariables(__DIR__ . '/../templates/base.php', ['pageTitle' => "Posts"]);
 $title = "Posts";
 $description = "A list of all my blog posts.";
 ?>

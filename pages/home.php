@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['includeWithVariables']('templates/base.php', ['pageTitle' => "Home"]);
+includeWithVariables('templates/base.php', ['pageTitle' => "Home"]);
 $title = "Home";
 $description = "";
 

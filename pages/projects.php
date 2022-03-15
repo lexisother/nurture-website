@@ -4,7 +4,7 @@ use Github\AuthMethod;
 use Github\Client;
 // use Github\HttpClient\Message\ResponseMediator;
 
-$GLOBALS['includeWithVariables'](__DIR__ . '/../templates/base.php', ['pageTitle' => 'Projects']);
+includeWithVariables(__DIR__ . '/../templates/base.php', ['pageTitle' => 'Projects']);
 $title = "Projects";
 $description = "This is a list of (almost) all of my GitHub projects.";
 
