@@ -26,20 +26,14 @@ class App
     return self::$viewFinder;
   }
 
-  public static function setFiles($filesVal)
+  public static function initialize()
   {
-    self::$files = $filesVal;
-  }
-
-  public static function setViewFinder($viewFinderVal)
-  {
-    self::$viewFinder = $viewFinderVal;
+    self::$files = new Filesystem;
+    self::$viewFinder = new FileViewFinder(self::$files, [__DIR__ . '/views']);
   }
 }
 
-// $app = new App();
-App::setFiles(new Filesystem);
-App::setViewFinder(new FileViewFinder(App::getFiles(), [__DIR__ . '/views']));
+App::initialize();
 
 // TODO: Make it `view`. Have it read through a `views` folder, yadda yadda.
 // <https://laravel.com/api/8.x/[Global_Namespace].html#function_view>
