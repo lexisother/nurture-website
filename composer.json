@@ -5,7 +5,8 @@
     "knplabs/github-api": "^3.0",
     "guzzlehttp/guzzle": "^7.0.1",
     "http-interop/http-factory-guzzle": "^1.0",
-    "hyn/frontmatter": "^1.1"
+    "hyn/frontmatter": "^1.1",
+    "filp/whoops": "^2.14"
   },
   "autoload": {
     "psr-4": {
