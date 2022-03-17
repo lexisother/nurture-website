@@ -29,6 +29,12 @@ nav {
         text-decoration: underline;
       }
     }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      height: 4vh;
+    }
   }
   .links {
     display: flex;

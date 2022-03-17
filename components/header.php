@@ -2,7 +2,9 @@
 
 <nav>
   <div class="title">
-    <a href="/"><?php echo $CONFIG['site_name'] ?>
+    <a href="/">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/1f3f3-fe0f-200d-26a7-fe0f.svg" />
+      <?php echo $CONFIG['site_name'] ?>
     </a>
   </div>
   <div class="links">
