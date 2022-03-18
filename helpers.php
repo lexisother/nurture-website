@@ -69,5 +69,7 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
  */
 function view($viewName, $variables = array())
 {
-  echo App::getViewFinder()->find($viewName);
+  // TODO: Implement $variables
+  $view = App::getViewFinder()->find($viewName);
+  include $view;
 }

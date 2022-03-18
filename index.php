@@ -12,7 +12,7 @@ use Whoops\Handler\PrettyPageHandler;
 // controller-structure using classes.
 // Maybe I should. I probably shouldn't. But I could.
 
-// TODO" Maybe write my own. Although, this looks a lot like old Ignition and
+// TODO: Maybe write my own. Although, this looks a lot like old Ignition and
 // that makes me happy.
 $whoops = new Run;
 $whoops->pushHandler(new PrettyPageHandler);
@@ -22,22 +22,22 @@ $router = new Router();
 $posts = include 'markdown.php';
 
 $router->get('/', function () {
-  include 'pages/home.php';
+  view('home');
 });
 
 $router->get('/projects', function () {
-  include 'pages/projects.php';
+  view('projects');
 });
 
 $router->mount('/posts', function () use ($router, $posts) {
   $router->get('/', function () use ($posts) {
-    includeWithVariables('pages/posts.php', ['posts' => $posts]);
+    includeWithVariables('views/posts.php', ['posts' => $posts]);
   });
 
   foreach ($posts as $post) {
     $title = $post['meta']['title'];
     $router->get("/{$title}", function () use ($post) {
-      includeWithVariables('pages/post.php', ['postData' => $post]);
+      includeWithVariables('views/post.php', ['postData' => $post]);
     });
   }
 });
