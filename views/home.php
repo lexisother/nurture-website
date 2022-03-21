@@ -30,6 +30,11 @@ $diff = $new->diff($bdate)->y;
     </p>
   </div>
 </div>
+
+<?php
+include './components/list.php';
+?>
+
 <div class="include-media-test"></div>
 
 <style>

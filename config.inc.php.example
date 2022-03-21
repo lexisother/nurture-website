@@ -2,5 +2,4 @@
 $CONFIG = [
   'site_name' => "Your site name here",
   'description' => "Your site description here",
-  'github_token' => "Your GitHub access token here",
 ];
