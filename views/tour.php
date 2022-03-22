@@ -1,28 +1,15 @@
 <?php
-
-use Github\AuthMethod;
-use Github\Client;
-
 includeWithVariables(__DIR__ . '/../templates/base.php', ['pageTitle' => 'Projects']);
 $title = "Projects";
 $description = "This is a list of (almost) all of my GitHub projects.";
 
-include __DIR__ . '/../config.inc.php';
-
-// TODO: Add caching https://github.com/php-cache/filesystem-adapter
-// see https://packagist.org/packages/knplabs/github-api for info
-$client = new Client();
-$client->authenticate($CONFIG['github_token'], AuthMethod::ACCESS_TOKEN);
-
-// Array containing repositories, see <https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user>
-$repositories = $client->api('user')->repositories('lexisother', 'owner', 'updated', 'desc');
 
 // Sort the repositories by their `updated_at` date, latest first
-usort($repositories, function ($a, $b) {
-  $date1 = strtotime($a['updated_at']);
-  $date2 = strtotime($b['updated_at']);
-  return $date2 - $date1;
-});
+// usort($repositories, function ($a, $b) {
+//   $date1 = strtotime($a['updated_at']);
+//   $date2 = strtotime($b['updated_at']);
+//   return $date2 - $date1;
+// });
 ?>
 
 <!-- Might be worth converting this into a `page` component/template. -->

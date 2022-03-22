@@ -3,12 +3,13 @@
 <nav>
   <div class="title">
     <a href="/">
-      <img src="https://twemoji.maxcdn.com/v/latest/svg/1f3f3-fe0f-200d-26a7-fe0f.svg" />
+      <img src="https://i.scdn.co/image/ab67616d0000b2737d6ac8b4a84ad4b342050d87" />
       <?php echo $CONFIG['site_name'] ?>
     </a>
   </div>
   <div class="links">
-    <a href='/projects'>Projects</a>
-    <a href='/posts'>Posts</a>
+    <a href='/tour'>Tour</a>
+    <a href='/songs'>Songs</a>
+    <a href='/aboutme'>About Me</a>
   </div>
 </nav>

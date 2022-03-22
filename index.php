@@ -5,42 +5,24 @@ require __DIR__ . '/vendor/autoload.php';
 use Bramus\Router\Router;
 use Whoops\Run;
 use Whoops\Handler\PrettyPageHandler;
-# https://packagist.org/packages/knplabs/github-api
-# https://packagist.org/packages/league/commonmark
 
-// You know, I was thinking of going completely overboard and writing my own
-// controller-structure using classes.
-// Maybe I should. I probably shouldn't. But I could.
-
-// TODO: Maybe write my own. Although, this looks a lot like old Ignition and
-// that makes me happy.
 $whoops = new Run;
 $whoops->pushHandler(new PrettyPageHandler);
 $whoops->register();
 
 $router = new Router();
-$posts = include 'markdown.php';
 
-$router->get('/', function () {
-  view('home');
-});
-
-$router->get('/projects', function () {
-  view('projects');
-});
-
-$router->mount('/posts', function () use ($router, $posts) {
-  $router->get('/', function () use ($posts) {
-    includeWithVariables('views/posts.php', ['posts' => $posts]);
-  });
-
-  foreach ($posts as $post) {
-    $title = $post['meta']['title'];
-    $router->get("/{$title}", function () use ($post) {
-      includeWithVariables('views/post.php', ['postData' => $post]);
-    });
+foreach (['home', 'tour', 'songs', 'aboutme'] as $route) {
+  $routename = $route;
+  $viewname = $route;
+  if ($route == 'home') {
+    $routename = "";
+    $viewname = "home";
   }
-});
 
+  $router->get("/{$routename}", function () use ($viewname) {
+    view($viewname);
+  });
+}
 
 $router->run();

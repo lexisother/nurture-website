@@ -25,3 +25,12 @@ $json = json_decode($data->childNodes->item(0)->nodeValue);
 foreach ($json->tour as $item) {
   echo $item->date;
 }
+?>
+
+<?php
+// foreach ($list as $item) {
+?>
+<!-- <h1>hi</h1> -->
+<?php
+// }
+?>
