@@ -4,9 +4,10 @@ $title = "Tour";
 $description = "This is a list of all planned tour dates, fetched dynamically.";
 
 // Bahaha, this has to be one of the greatest things I've written
+// DOM parsing in PHP just to get some data from an external source, I love it.
 $html = file_get_contents("https://porterrobinson.com");
 $document = new DOMDocument();
-@$document->loadHTML($html);
+@$document->loadHTML($html); // note the `@` here, its purpose is to ignore all errors
 $document->preserveWhiteSpace = false;
 
 // Fetch the `_DATA_` script tag and extract the JSON...
@@ -39,6 +40,13 @@ usort($json->tour, function ($a, $b) {
 $tourItems = [];
 foreach ($json->tour as $item) {
   if ($item->active && strtotime($item->date) > time()) {
+    $date = date_create($item->date);
+    $item->formattedDate = (object) [
+      "month" => date_format($date, "M"),
+      "day" => date_format($date, "d"),
+      "year" => date_format($date, "Y"),
+      "textDay" => date_format($date, "D"),
+    ];
     array_push($tourItems, $item);
   }
 }
@@ -54,10 +62,15 @@ foreach ($json->tour as $item) {
   ?>
     <div class="list-item">
       <div class="name"><?= $item->headline ?></div>
-      <!-- <div class="description"><?= $item->location ?> | <?= $item->date ?></div> -->
       <div class="info">
-        <div class="label"><?= $item->location ?></div>
-        <div class="label"><?= $item->date ?></div>
+        <div class="label">
+          <i class="las la-map-marker-alt"></i>
+          <?= $item->location ?>
+        </div>
+        <div class="label">
+          <i class="las la-clock"></i>
+          <?= $item->formattedDate->month ?> - <?= $item->formattedDate->day ?> - <?= $item->formattedDate->year ?> <?= $item->formattedDate->textDay ?>
+        </div>
       </div>
     </div>
     <hr />
@@ -65,3 +78,9 @@ foreach ($json->tour as $item) {
   }
   ?>
 </div>
+
+<style>
+  .las {
+    margin-right: 0.25rem;
+  }
+</style>
