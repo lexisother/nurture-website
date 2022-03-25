@@ -8,7 +8,12 @@ includeWithVariables('templates/base.php', ['pageTitle' => "{$songMeta->name} | 
   <div class="song-header">
     <div class="song-meta">
       <div class="song-meta-title"><?= $songMeta->name ?></div>
-      <div class="song-meta-desc"><?= str_replace("\n", "<br>", $songMeta->description) ?></div>
+      <div class="song-meta-desc">
+        <?= str_replace("\n", "<br>", $songMeta->description) ?>
+        <br />
+        <br />
+        <iframe width="640" height="420" src="https://www.youtube.com/embed/<?= $songMeta->external_urls->youtube ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
 
     <div class="song-data">
