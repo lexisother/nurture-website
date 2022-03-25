@@ -4,6 +4,10 @@ div[class*='-page'] {
   max-width: 920px;
   margin: auto;
 
+  p {
+    font-size: 1.5rem;
+  }
+
   .header {
     .title {
       display: flex;
