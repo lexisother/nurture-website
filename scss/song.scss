@@ -1,15 +1,13 @@
+@import '_colorscheme';
+
 .container {
   width: 75%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  margin-top: 2vh;
   gap: 2rem;
-
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-
-  background-color: #273241;
 
   .song-header {
     display: flex;
@@ -22,7 +20,7 @@
       width: 70%;
 
       .song-meta-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: bold;
         color: #fff;
         margin: 1rem;
@@ -46,8 +44,11 @@
         color: #fff;
         align-content: center;
 
+        background-color: $base-01;
+        border-radius: 2rem;
+
         .song-data-item-header {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           font-weight: bold;
           margin: 1rem;
         }
@@ -57,7 +58,7 @@
           align-items: center;
           gap: 0.5rem;
           margin-left: 1rem;
-          font-size: 0.9rem;
+          font-size: 1.2rem;
 
           .song-data-item-image {
             width: 2rem;
