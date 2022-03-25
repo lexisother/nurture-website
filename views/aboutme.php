@@ -3,6 +3,8 @@ includeWithVariables('templates/base.php', ['pageTitle' => "About Me"]);
 $title = "About Me";
 $description = "";
 
+// Calculate the difference in years between my birth date and the current
+// date.
 $bdate = new DateTime('2005-11-28');
 $new = new DateTime();
 $diff = $new->diff($bdate)->y;

@@ -3,9 +3,11 @@ includeWithVariables(__DIR__ . '/../templates/base.php', ['pageTitle' => 'Songs'
 $title = "Songs";
 $description = "A list of Nurture's songs, fetched from the Spotify API.";
 
+// Fetch the song data from the static file
 $file = file_get_contents(__DIR__ . '/../assets/songs.json');
 $json = json_decode($file);
 
+// And below, display the data in a grid.
 ?>
 
 <div class="tour-page">

@@ -6,9 +6,11 @@ $description = "This is a list of all planned tour dates, fetched dynamically.";
 // Bahaha, this has to be one of the greatest things I've written
 // DOM parsing in PHP just to get some data from an external source, I love it.
 $html = file_get_contents("https://porterrobinson.com");
+
+// <https://php.net/manual/en/class.domdocument.php>
 $document = new DOMDocument();
-@$document->loadHTML($html); // note the `@` here, its purpose is to ignore all errors
-$document->preserveWhiteSpace = false;
+@$document->loadHTML($html); // note the `@` here, its purpose is to ignore all errors, see <https://www.php.net/manual/en/language.operators.errorcontrol.php>
+$document->preserveWhiteSpace = false; // remove redundant whitespace
 
 // Fetch the `_DATA_` script tag and extract the JSON...
 $data = $document->getElementById('_DATA_');
@@ -37,6 +39,7 @@ usort($json->tour, function ($a, $b) {
   return $date1 - $date2;
 });
 
+// Loop over the tour items, see if the tour date has passed, and if not, push it to a new array.
 $tourItems = [];
 foreach ($json->tour as $item) {
   if ($item->active && strtotime($item->date) > time()) {

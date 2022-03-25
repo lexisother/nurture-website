@@ -1,4 +1,6 @@
 <?php
+// This file does nothing but display the data fed to it.
+// In can, in the traditional sense, be called a "component".
 includeWithVariables('templates/base.php', ['pageTitle' => "{$songMeta->name} | Songs"]);
 ?>
 
