@@ -37,7 +37,7 @@ $router->mount('/songs', function () use ($router) {
     $name = strtolower(str_replace(" ", "-", $track->name));
 
     $router->get("/{$name}", function () use ($name, $meta) {
-      view("songs.{$name}", ['songMeta' => $meta]);
+      view("song", ['songMeta' => $meta]);
     });
   }
 });
