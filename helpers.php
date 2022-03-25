@@ -4,6 +4,9 @@ use Extersia\Filesystem\Filesystem;
 use Extersia\View\FileViewFinder;
 
 // TODO: Make a proper app class with config
+/**
+ * The main App class, the one who oversees all.
+ */
 class App
 {
   /**
@@ -16,16 +19,29 @@ class App
    */
   private static $viewFinder;
 
+  /**
+   * Return the App's Filesystem instance.
+   *
+   * @return \Extersia\Filesystem\Filesystem
+   */
   public static function getFiles()
   {
     return self::$files;
   }
 
+  /**
+   * Return the App's FileViewFinder instance.
+   *
+   * @return \Extersia\View\FileViewFinder
+   */
   public static function getViewFinder()
   {
     return self::$viewFinder;
   }
 
+  /**
+   * Initialize the App.
+   */
   public static function initialize()
   {
     self::$files = new Filesystem;
@@ -35,9 +51,6 @@ class App
 
 App::initialize();
 
-// TODO: Make it `view`. Have it read through a `views` folder, yadda yadda.
-// <https://laravel.com/api/8.x/[Global_Namespace].html#function_view>
-// <https://github.com/laravel/framework/blob/8.x/src/Illuminate/Foundation/helpers.php#L924>
 function includeWithVariables($filePath, $variables = array(), $print = true)
 {
   $output = NULL;
@@ -63,7 +76,6 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
 /**
  * Render a view with the specified options.
  *
- * @param App $app The app.
  * @param string $viewName The view to render.
  * @param array  $variables Data to pass to the rendered view.
  */
