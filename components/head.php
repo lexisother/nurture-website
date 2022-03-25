@@ -5,12 +5,18 @@ use ScssPhp\ScssPhp\Compiler;
 $compiler = new Compiler();
 $compiler->setImportPaths(__DIR__ . '/../scss/');
 $res = "";
+$index = "";
 
 foreach (new DirectoryIterator(__DIR__ . '/../scss') as $file) {
   if ($file->isDot()) continue;
   $content = file_get_contents($file->getRealPath());
-  $res .= $compiler->compileString($content)->getCss();
+  if ($file->getBasename() == "index.scss") {
+    $index .= $compiler->compileString($content)->getCss();
+  } else {
+    $res .= $compiler->compileString($content)->getCss();
+  }
 }
+$res = $index . $res;
 ?>
 
 
