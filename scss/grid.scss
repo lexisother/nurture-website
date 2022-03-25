@@ -1,0 +1,32 @@
+@import '_include-media';
+
+.grid {
+  @include media('>phone', '<tablet') {
+    grid-template-columns: 1fr;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
+
+  .gridItem {
+    border: 1px solid black;
+    margin-bottom: 20px;
+
+    .gridItemHeader {
+      font-size: 30px;
+
+      img {
+        border-radius: 50%;
+      }
+      p {
+        margin-top: 0;
+      }
+    }
+    .gridItemText > p {
+      padding: 0.5rem;
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+}
