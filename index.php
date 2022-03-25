@@ -25,4 +25,22 @@ foreach (['home', 'tour', 'songs', 'aboutme'] as $route) {
   });
 }
 
+$router->mount('/songs', function () use ($router) {
+  $router->get('/', function () {
+    view('songs');
+  });
+
+  $file = file_get_contents(__DIR__ . '/assets/songs.json');
+  $json = json_decode($file);
+  foreach ($json->items as $track) {
+    $meta = array_column($json->items, null, 'name')[$track->name];
+    $name = strtolower(str_replace(" ", "-", $track->name));
+
+    $router->get("/{$name}", function () use ($name, $meta) {
+      view("songs.{$name}", ['songMeta' => $meta]);
+    });
+  }
+});
+
+
 $router->run();
