@@ -1,5 +1,5 @@
 <?php
-includeWithVariables('templates/base.php', ['pageTitle' => "Home"]);
+includeWithVariables('templates/base.php', ['pageTitle' => "About Me"]);
 $title = "About Me";
 $description = "";
 
