@@ -1,0 +1,35 @@
+@import 'include-media';
+
+@include media('>phone', '<tablet') {
+  .header {
+    .title {
+      font-size: 2rem !important;
+    }
+    .desc {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+div[class*='-page'] {
+  max-width: 920px;
+  margin: auto;
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    .title {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .desc {
+      display: flex;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
