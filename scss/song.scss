@@ -1,0 +1,79 @@
+.container {
+  width: 75%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2rem;
+
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  background-color: #273241;
+
+  .song-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+
+    .song-meta {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+
+      .song-meta-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 1rem;
+      }
+      .song-meta-desc {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 1rem;
+      }
+    }
+
+    .song-data {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      gap: 2rem;
+
+      .song-data-item {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        align-content: center;
+
+        .song-data-item-header {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin: 1rem;
+        }
+        .song-data-item-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+          margin-left: 1rem;
+          font-size: 0.9rem;
+
+          .song-data-item-image {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.2rem;
+            border-radius: 50%;
+            background-color: rgba(31, 36, 44, 1);
+          }
+        }
+      }
+
+      .song-data-labels {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 1rem;
+      }
+    }
+  }
+}
