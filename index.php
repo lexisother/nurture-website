@@ -20,13 +20,13 @@ foreach (['home', 'tour', 'songs', 'aboutme'] as $route) {
     $viewname = "home";
   }
 
-  $router->get("/{$routename}", function () use ($viewname) {
+  $router->all("/{$routename}", function () use ($viewname) {
     view($viewname);
   });
 }
 
 $router->mount('/songs', function () use ($router) {
-  $router->get('/', function () {
+  $router->all('/', function () {
     view('songs');
   });
 
@@ -36,7 +36,7 @@ $router->mount('/songs', function () use ($router) {
     $meta = array_column($json->items, null, 'name')[$track->name];
     $name = strtolower(str_replace(" ", "-", $track->name));
 
-    $router->get("/{$name}", function () use ($meta) {
+    $router->all("/{$name}", function () use ($meta) {
       view("song", ['songMeta' => $meta]);
     });
   }

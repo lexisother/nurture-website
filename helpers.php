@@ -6,9 +6,28 @@ use Symfony\Component\Translation\Translator;
 
 App::initialize();
 
+if (!isset($_COOKIE['language'])) {
+  setcookie("language", "en", 2147483647);
+}
+if (isset($_POST['nl']) || isset($_POST['en'])) {
+  if (isset($_POST['en'])) {
+    setcookie("language", "en", 2147483647);
+    header("Refresh: 0; url={$_SERVER['REQUEST_URI']}");
+  }
+  if (isset($_POST['nl'])) {
+    setcookie("language", "nl", 2147483647);
+    header("Refresh: 0; url={$_SERVER['REQUEST_URI']}");
+  }
+}
+
 function trans(string $text)
 {
   $translator = new Translator('en');
+  if (isset($_COOKIE['language'])) {
+    $_COOKIE['language'] == 'nl'
+      ? $translator->setLocale('nl')
+      : "";
+  }
   $translator->addLoader('yml', new YamlFileLoader());
   $translator->addResource('yml', __DIR__ . '/translations/messages.yml', 'en');
   $translator->addResource('yml', __DIR__ . '/translations/messages.nl.yml', 'nl');
