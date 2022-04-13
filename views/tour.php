@@ -1,7 +1,6 @@
 <?php
 includeWithVariables(__DIR__ . '/../templates/base.php', ['pageTitle' => 'Tour']);
 $title = "Tour";
-$description = "This is a list of all planned tour dates, fetched dynamically.";
 
 // Bahaha, this has to be one of the greatest things I've written
 // DOM parsing in PHP just to get some data from an external source, I love it.
@@ -58,7 +57,7 @@ foreach ($json->tour as $item) {
 <div class="tour-page">
   <div class="header">
     <div class="title"><?= $title ?></div>
-    <div class="desc"><?= $description ?></div>
+    <div class="desc"><?= trans('tour.header') ?></div>
   </div>
   <?php
   foreach ($tourItems as $item) {

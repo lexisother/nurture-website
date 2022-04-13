@@ -3,8 +3,8 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Bramus\Router\Router;
-use Whoops\Run;
 use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 $whoops = new Run;
 $whoops->pushHandler(new PrettyPageHandler);
@@ -36,7 +36,7 @@ $router->mount('/songs', function () use ($router) {
     $meta = array_column($json->items, null, 'name')[$track->name];
     $name = strtolower(str_replace(" ", "-", $track->name));
 
-    $router->get("/{$name}", function () use ($name, $meta) {
+    $router->get("/{$name}", function () use ($meta) {
       view("song", ['songMeta' => $meta]);
     });
   }

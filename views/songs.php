@@ -1,7 +1,6 @@
 <?php
 includeWithVariables(__DIR__ . '/../templates/base.php', ['pageTitle' => 'Songs']);
 $title = "Songs";
-$description = "A list of Nurture's songs, fetched from the Spotify API.";
 
 // Fetch the song data from the static file
 $file = file_get_contents(__DIR__ . '/../assets/songs.json');
@@ -13,7 +12,7 @@ $json = json_decode($file);
 <div class="tour-page">
   <div class="header">
     <div class="title"><?= $title ?></div>
-    <div class="desc"><?= $description ?></div>
+    <div class="desc"><?= trans('songs.header') ?></div>
   </div>
   <div class="grid">
     <?php

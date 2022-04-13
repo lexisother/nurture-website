@@ -1,8 +1,19 @@
 <?php
 
 use Extersia\App\App;
+use Symfony\Component\Translation\Loader\YamlFileLoader;
+use Symfony\Component\Translation\Translator;
 
 App::initialize();
+
+function trans(string $text)
+{
+  $translator = new Translator('en');
+  $translator->addLoader('yml', new YamlFileLoader());
+  $translator->addResource('yml', __DIR__ . '/translations/messages.yml', 'en');
+  $translator->addResource('yml', __DIR__ . '/translations/messages.nl.yml', 'nl');
+  return $translator->trans($text);
+}
 
 /**
  * Returns the project root.

@@ -1,0 +1,36 @@
+home:
+  text: |
+    <p>Welkom op mijn informatieve website over mijn favoriete album ooit, Porter Robinson's "Nurture"</p>
+    <p>Ik ben het eerste nummer "Get Your Wish" tegengekomen tijdens de 2021 "stay-at-home" editie van Porter's jaarlijkse "Second Sky" festival, wat tijdens COVID "Secret Sky" heette.</p>
+    <p>Ik was meteen verliefd. De melodieën, de mastering, de zang, alles voelde zo... geruststellend. Op een of andere manier.</p>
+    <p>Toen meer nummers van het album uitkwamen, zoals "Look at the Sky" aan het einde van de 2021 live set, kreeg het album al snel een plaats in mijn hart.</p>
+    <p>Sindsdien ben ik niet gestopt met het beluisteren van het album, remixes van de numers, of de live sets.</p>
+    <p>Ik had altijd al een ding voor Porter's muziek, zoals zijn debutalbum "Worlds", waar nummers zoals "Flicker" of "Hear the Bells" juist uitsprongen.</p>
+    <p>Maar Nurture? Dit was iets speciaals.</p>
+
+tour:
+  header: Dit is een lijst van alle geplande tour datums, dynamisch opgehaald.
+
+songs:
+  header: Een lijst van Nurture's nummers, opgehaald van de Spotify API.
+
+aboutme:
+  content: |
+    <p>
+      Hoi! Ik ben Alyxia, een {{age}} jaar oude trans <img src="https://twemoji.maxcdn.com/v/latest/svg/1f3f3-fe0f-200d-26a7-fe0f.svg" /> hobbyist software developer uit Nederland.
+    </p>
+
+    <p>
+      Het meeste van mijn werk is in TypeScript, maar ik ben sinds recent PHP aan het leren. Ik ben grotendeels
+      geïnteresseerd in Discord bot ontwikkeling / modificaties aan het chatprogramma zelf, en web applicaties.
+    </p>
+
+    <p>
+      Naast software development, maak ik ook muziek en speel ik piano.
+    </p>
+
+    <p>
+      Wil je chatten? Er zijn een paar manieren om contact met me op te nemen!<br>
+      Je kan me hier emailen: alyxia at riseup dot net<br>
+      of neem direct contact op: Alyxia op Revolt (bij voorkeur) of Alyxia#4650 op Discord
+    </p>
