@@ -8,6 +8,28 @@ home:
     <p>Ik had altijd al een ding voor Porter's muziek, zoals zijn debutalbum "Worlds", waar nummers zoals "Flicker" of "Hear the Bells" juist uitsprongen.</p>
     <p>Maar Nurture? Dit was iets speciaals.</p>
 
+  reviewed: 'Bekeken door mevrouw Van Eijk om 14:55 op 13 April 2022.'
+aboutme:
+  content: |
+    <p>
+      Hoi! Ik ben Alyxia, een {{age}} jaar oude trans <img src="https://twemoji.maxcdn.com/v/latest/svg/1f3f3-fe0f-200d-26a7-fe0f.svg" /> hobbyist software developer uit Nederland.
+    </p>
+
+    <p>
+      Het meeste van mijn werk is in TypeScript, maar ik ben sinds recent PHP aan het leren. Ik ben grotendeels
+      geïnteresseerd in Discord bot ontwikkeling / modificaties aan het chatprogramma zelf, en web applicaties.
+    </p>
+
+    <p>
+      Naast software development, maak ik ook muziek en speel ik piano.
+    </p>
+
+    <p>
+      Wil je chatten? Er zijn een paar manieren om contact met me op te nemen!<br>
+      Je kan me hier emailen: alyxia at riseup dot net<br>
+      of neem direct contact op: Alyxia op Revolt (bij voorkeur) of Alyxia#4650 op Discord
+    </p>
+
 tour:
   header: Dit is een lijst van alle geplande tour datums, dynamisch opgehaald.
 
@@ -101,24 +123,3 @@ songs:
     Het is zo'n subliem stuk, met zoveel emotie en energie, ik denk dat het beter is om Porter het zelf uit te laten leggen.<br /><br />
 
     "Met dit nummer probeerde ik de hele reis te begrijpen en probeerde ik erachter te komen wat er is veranderd. Wat heb ik geleerd? Ben ik beter? Ben ik tevreden? Het was enorm moeilijk om te schrijven, maar uiteindelijk kreeg ik het antwoord: dat voldoening niet het echte doel is. Als je alles bereikt waar je naar streeft, stop je met vooruitkijken. Je kunt nergens heen. Dit is nog zo'n nummer waar ik aan het huilen was terwijl ik het schreef omdat ik denk dat het een soort van persoonlijke openbaring was. Nu sta ik aan de andere kant hiervan, nog steeds worstelend met het maken van muziek, nog steeds voel ik me niet helemaal 'heel', maar ik begin te begrijpen dat dat misschien een goede zaak is. Misschien is dat het punt. Misschien is muziek maken mijn manier van me levent proberen te voelen, keer op keer."
-
-aboutme:
-  content: |
-    <p>
-      Hoi! Ik ben Alyxia, een {{age}} jaar oude trans <img src="https://twemoji.maxcdn.com/v/latest/svg/1f3f3-fe0f-200d-26a7-fe0f.svg" /> hobbyist software developer uit Nederland.
-    </p>
-
-    <p>
-      Het meeste van mijn werk is in TypeScript, maar ik ben sinds recent PHP aan het leren. Ik ben grotendeels
-      geïnteresseerd in Discord bot ontwikkeling / modificaties aan het chatprogramma zelf, en web applicaties.
-    </p>
-
-    <p>
-      Naast software development, maak ik ook muziek en speel ik piano.
-    </p>
-
-    <p>
-      Wil je chatten? Er zijn een paar manieren om contact met me op te nemen!<br>
-      Je kan me hier emailen: alyxia at riseup dot net<br>
-      of neem direct contact op: Alyxia op Revolt (bij voorkeur) of Alyxia#4650 op Discord
-    </p>

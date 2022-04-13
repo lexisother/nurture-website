@@ -8,6 +8,30 @@ home:
     <p>I always had a liking for Porter's music, such as his debut album "Worlds", where tracks like "Flicker" or "Hear the Bells" jumped out to me.</p>
     <p>But Nurture? It's something special.</p>
 
+  reviewed: 'Reviewd by Ms. van Eijk at 2:55PM, April 13th 2022.'
+
+aboutme:
+  content: |
+    <p>
+      Hi! I'm Alyxia! I'm a {{age}} y/o trans <img src="https://twemoji.maxcdn.com/v/latest/svg/1f3f3-fe0f-200d-26a7-fe0f.svg" /> hobbyist software developer based in the
+      Netherlands.
+    </p>
+
+    <p>
+      Most of my work is in TypeScript, though I've been picking up PHP. I'm mostly interested in Discord
+      bot development / client modifications, and web applications.
+    </p>
+
+    <p>
+      Aside from software development, I'm also into composing music and playing the piano.
+    </p>
+
+    <p>
+      Wanna chat? There's a couple ways to contact me!<br>
+      You can email me: alyxia at riseup dot net<br>
+      or directly message me: Alyxia on Revolt (preferably), Alyxia#4650 on Discord
+    </p>
+
 tour:
   header: This is a list of all planned tour dates, fetched dynamically.
 
@@ -102,25 +126,3 @@ songs:
     It's such a sublime piece, with so much emotion and energy, I think it's better to let Porter himself explain.<br /><br />
 
     "This song was me trying to make sense of the whole journey, trying to figure out what has changed. What did I learn? Am I any better? Am I satisfied? It was enormously difficult to write, but ultimately, the answer I came to is that satisfaction isn’t the real goal. If you accomplish everything you’re striving for, you’ll stop looking forward. There’s nowhere to go. This is another one where I was crying while writing it because I guess it was sort of a personal epiphany. Here I am on the other side of this, still struggling with making music, still not necessarily feeling whole, but beginning to understand that maybe that’s a good thing. Maybe that’s the point. Maybe making music is my way of trying to feel alive, over and over again."
-
-aboutme:
-  content: |
-    <p>
-      Hi! I'm Alyxia! I'm a {{age}} y/o trans <img src="https://twemoji.maxcdn.com/v/latest/svg/1f3f3-fe0f-200d-26a7-fe0f.svg" /> hobbyist software developer based in the
-      Netherlands.
-    </p>
-
-    <p>
-      Most of my work is in TypeScript, though I've been picking up PHP. I'm mostly interested in Discord
-      bot development / client modifications, and web applications.
-    </p>
-
-    <p>
-      Aside from software development, I'm also into composing music and playing the piano.
-    </p>
-
-    <p>
-      Wanna chat? There's a couple ways to contact me!<br>
-      You can email me: alyxia at riseup dot net<br>
-      or directly message me: Alyxia on Revolt (preferably), Alyxia#4650 on Discord
-    </p>

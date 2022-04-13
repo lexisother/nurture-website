@@ -12,4 +12,8 @@ $description = "";
   <br />
   <p><i>"Everything we need is already here."</i></p>
 
+  <hr />
+
+  <p><?= trans('home.reviewed') ?></p>
+
 </div>
