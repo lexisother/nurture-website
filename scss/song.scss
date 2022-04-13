@@ -87,6 +87,13 @@
 }
 
 // TODO: Maybe in the future. "Not today!"
+
+@include media('>=815px', '<desktop') {
+  .container {
+    width: 100%;
+  }
+}
+
 @include media('>phone', '<tablet') {
   .container {
     width: 100%;

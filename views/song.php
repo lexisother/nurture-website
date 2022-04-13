@@ -2,6 +2,7 @@
 // This file does nothing but display the data fed to it.
 // In can, in the traditional sense, be called a "component".
 includeWithVariables('templates/base.php', ['pageTitle' => "{$songMeta->name} | Songs"]);
+$spacedTitle = strtolower(str_replace(" ", "-", $songMeta->name));
 ?>
 
 <div class="container">
@@ -9,7 +10,7 @@ includeWithVariables('templates/base.php', ['pageTitle' => "{$songMeta->name} | 
     <div class="song-meta">
       <div class="song-meta-title"><?= $songMeta->name ?></div>
       <div class="song-meta-desc">
-        <?= str_replace("\n", "<br>", $songMeta->description) ?>
+        <?= trans("songs.{$spacedTitle}") ?>
         <br />
         <br />
         <iframe width="640" height="420" src="https://www.youtube.com/embed/<?= $songMeta->external_urls->youtube ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
