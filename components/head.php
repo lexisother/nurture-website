@@ -1,14 +1,20 @@
 <?php
-// SCSS stuff
+
 use ScssPhp\ScssPhp\Compiler;
 
+// Create a new instance of the SCSS compiler
 $compiler = new Compiler();
-$compiler->setImportPaths(__DIR__ . '/../scss/');
+$compiler->setImportPaths(__DIR__ . '/../scss/'); // Make sure `@import` statements don't break
+
 $res = "";
 $index = "";
 
+// Loop over every file in our SCSS directory,
 foreach (new DirectoryIterator(__DIR__ . '/../scss') as $file) {
+  // Does the filename start with a dot? Skip it.
   if ($file->isDot()) continue;
+
+  // Get the file contents, compile it, and push it to the appropriate string.
   $content = file_get_contents($file->getRealPath());
   if ($file->getBasename() == "index.scss") {
     $index .= $compiler->compileString($content)->getCss();
@@ -16,6 +22,8 @@ foreach (new DirectoryIterator(__DIR__ . '/../scss') as $file) {
     $res .= $compiler->compileString($content)->getCss();
   }
 }
+
+// Merge the index file with all the others.
 $res = $index . $res;
 ?>
 

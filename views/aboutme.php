@@ -27,8 +27,13 @@ $diff = $new->diff($bdate)->y;
     </p>
 
     <p>
-      Although my work isn't all that professional, aside from software development, I'm also into
-      composing music, playing the piano and the guitar.
+      Aside from software development, I'm also into composing music, playing the piano and the guitar.
+    </p>
+
+    <p>
+      Wanna chat? There's a couple ways to contact me!<br>
+      You can email me: alyxia at riseup dot net<br>
+      or directly message me: Alyxia on Revolt (preferably), Alyxia#4650 on Discord
     </p>
   </div>
 </div>

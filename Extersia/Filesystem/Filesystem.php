@@ -2,6 +2,9 @@
 
 namespace Extersia\Filesystem;
 
+/**
+ * Filesystem helpers.
+ */
 class Filesystem
 {
   /**
